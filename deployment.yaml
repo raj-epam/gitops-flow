@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: py-app-fe
+  namespace: python-app
+  labels:
+    app: py-app-fe
+spec:
+  replicas: 1  # Number of desired replicas
+  selector:
+    matchLabels:
+      app: py-app-fe
+      version: primary
+  template:
+    metadata:
+      labels:
+        app: py-app-fe
+        version: primary
+    spec:
+      containers:
+      - name: py-app-fe
+        image: dhlawowacr.azurecr.io/pywebapp:1
+        ports:
+        - containerPort: 5000  # Port your application is exposing
