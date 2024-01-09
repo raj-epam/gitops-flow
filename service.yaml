@@ -7,6 +7,6 @@ spec:
   selector:
     app: py-app-fe
   ports:
-    - protocol: http
+    - protocol: TCP
       port: 80
       targetPort: 5000
