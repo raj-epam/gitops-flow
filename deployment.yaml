@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
       - name: py-app-fe
-        image: dhlawowacr.azurecr.io/pywebapp:67
+        image: dhlawowacr.azurecr.io/pywebapp:71
         ports:
         - containerPort: 5000  # Port your application is exposing
       imagePullSecrets:
